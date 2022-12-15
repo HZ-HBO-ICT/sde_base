@@ -1,6 +1,7 @@
 package edu.hz;
 
 import edu.hz.io.*;
+import edu.hz.statement.HZMissionStatement;
 
 public class Main {
 
@@ -11,8 +12,10 @@ public class Main {
         ConsoleReader reader = new ConsoleReader();
 
         // execute
-        writer.writeLine("Hello World!");
-        reader.readLine();
+        HZMissionStatement HZIP = new HZMissionStatement();
+
+        writer.writeLines(HZIP.getFirstAmbition());
+//        reader.readLine();
 
     }
 }
