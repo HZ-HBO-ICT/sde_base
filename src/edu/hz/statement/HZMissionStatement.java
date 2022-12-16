@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class HZMissionStatement {
+public class HZMissionStatement implements StatementWriter {
 
     // First Ambition
     private List<String> _firstAmbition;
@@ -35,8 +35,8 @@ public class HZMissionStatement {
                 " personally.");
     }
 
-    public String[] getFirstAmbition() {
-
+    @Override
+    public String[] getStatements() {
         return _firstAmbition.toArray(new String[0]);
     }
 }

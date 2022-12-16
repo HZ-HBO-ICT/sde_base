@@ -2,6 +2,8 @@ package edu.hz;
 
 import edu.hz.io.*;
 import edu.hz.statement.HZMissionStatement;
+import edu.hz.statement.StatementWriter;
+import edu.hz.statement.StatementWriterShortify;
 
 public class Main {
 
@@ -12,9 +14,13 @@ public class Main {
         ConsoleReader reader = new ConsoleReader();
 
         // execute
-        HZMissionStatement HZIP = new HZMissionStatement();
+        StatementWriter graduateStatement = new HZMissionStatement();
 
-        writer.writeLines(HZIP.getFirstAmbition());
+        StatementWriter undergraduateStatement = new StatementWriterShortify(graduateStatement);
+
+
+
+        writer.writeLines(undergraduateStatement.getStatements());
 //        reader.readLine();
 
     }
