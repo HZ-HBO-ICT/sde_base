@@ -3,6 +3,7 @@ package edu.hz;
 import edu.hz.io.*;
 import edu.hz.statement.HZMissionStatement;
 import edu.hz.statement.StatementWriter;
+import edu.hz.statement.StatementWriterPolitify;
 import edu.hz.statement.StatementWriterShortify;
 
 public class Main {
@@ -15,12 +16,12 @@ public class Main {
 
         // execute
         StatementWriter graduateStatement = new HZMissionStatement();
-
         StatementWriter undergraduateStatement = new StatementWriterShortify(graduateStatement);
+        StatementWriter caretakersStatement = new StatementWriterPolitify(undergraduateStatement);
 
 
 
-        writer.writeLines(undergraduateStatement.getStatements());
+        writer.writeLines(caretakersStatement.getStatements());
 //        reader.readLine();
 
     }

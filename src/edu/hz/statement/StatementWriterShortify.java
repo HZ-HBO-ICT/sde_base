@@ -15,7 +15,7 @@ public class StatementWriterShortify extends AbstractStatementWriter{
         String[] shortSentences = sentence.split("[.,]");
 
         for(String shortSentence : shortSentences) {
-            String capitalizedShortSentence = shortSentence.substring(0,1).toUpperCase()
+            String capitalizedShortSentence = Character.toUpperCase(shortSentence.charAt(0))
                     + shortSentence.substring(1).toLowerCase() + ".";
 
             res.add(capitalizedShortSentence);
